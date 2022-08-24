@@ -29,7 +29,10 @@ function App() {
       headers: { "Content-type": "application/json" },
     })
       .then((res) => res.json())
-      .then((data) => setTodolist(data));
+      .then((data) => {
+        console.log(data);
+        setTodolist(data);
+      });
   };
 
   //POST 요청
